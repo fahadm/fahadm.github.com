@@ -21,12 +21,19 @@ For this tutorial i am going to use Github .
 
 
 > git config --global user.name ="username"
+
 > git config --global user.email ="email"
+
 > git init
+
 > git add .
+
 > git commit -m "First Commit"
+
 > git remote add origin https://github.com/username/repositoryname.git
+
 // For example this would be for me https://github.com/fahadm/fastshop.git
+
 > git push -u origin master
 
 
@@ -54,5 +61,4 @@ All the other steps are same
 
 Screenshots to follow (Provided i get the time)
 Happy Coding :).. 
-#homework04
 
