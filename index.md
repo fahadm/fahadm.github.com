@@ -1,46 +1,58 @@
 ---
 layout: page
-title: Hello World!
-tagline: Supporting tagline
+title: Deploying your Application on AppHarbor!
+tagline: Using git
 ---
-{% include JB/setup %}
 
-Read [Jekyll Quick Start](http://jekyllbootstrap.com/usage/jekyll-quick-start.html)
+## Deploying Your .net Application to Appharbor using git
 
-Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllbootstrap.com)
+I have noticed that many people new to git seem to have problems uploading their application to Appharbor.
+For this tutorial i am going to use Github .
 
-## Update Author Attributes
+1. First of All make an account on Github https://github.com/ or Bitbucket https://bitbucket.org/
+1a. If you are using Github request for private repositories using https://github.com/edu (you would get the private repositories instantly if you use university email)
+2. Go to github.com and click New repository.
+3. Enter the repository name , the description and click the private radio button, after all this click create the repository
+4. Install git using http://windows.github.com/
+5. Create a new directory with the name of your repository.
+6. Open your project in Visual studio, under the build tool-bar click publish , enter the location of the directory which you had set the in previous step,
+7. Open GitShell change the directory to directory created above.
+8. Write the following commands:
 
-In `_config.yml` remember to specify your own data:
-    
-    title : My Blog =)
-    
-    author :
-      name : Name Lastname
-      email : blah@email.test
-      github : username
-      twitter : username
 
-The theme should reference these variables whenever needed.
-    
-## Sample Posts
+> git config --global user.name ="username"
+> git config --global user.email ="email"
+> git init
+> git add .
+> git commit -m "First Commit"
+> git remote add origin https://github.com/username/repositoryname.git
+// For example this would be for me https://github.com/fahadm/fastshop.git
+> git push -u origin master
 
-This blog contains sample posts which help stage pages and blog data.
-When you don't need the samples anymore just delete the `_posts/core-samples` folder.
 
-    $ rm -rf _posts/core-samples
 
-Here's a sample "posts list".
+When you would push it should ask for a password. enter your github password.
+Now your Repository is ready. 
 
-<ul class="posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+9. Create an account on https://appharbor.com.
+10.After logging in to appharbor enter the name of your application then click create new.
+11. Click settings on the left menu.
 
-## To-Do
+12. Click Disable Precompilation.
 
-This theme is still unfinished. If you'd like to be added as a contributor, [please fork](http://github.com/plusjade/jekyll-bootstrap)!
-We need to clean up the themes, make theme usage guides with theme-specific markup examples.
+13.Click Configure GitHub to deploy to AppHarbor.
 
+14. Select the repository you want to deploy from the drop down menu
+
+15. In a few seconds your website will be deployed, you can access it using the name.apphb.com where name is the name which you used in step 10.
+
+
+if you are using bitbucket just create a private repository in bitbucket and then in step 8 use the link provided by bit bucket 
+$ git remote add origin https://username@bitbucket.org/username/repository.git 
+Similarly in step 13 click configure using bitbucket
+All the other steps are same
+
+Screenshots to follow (Provided i get the time)
+Happy Coding :).. 
+#homework04
 
